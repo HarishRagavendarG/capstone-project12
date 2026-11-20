@@ -1,6 +1,8 @@
-resource "aws_s3_bucket" "demo_bucket" {
-  bucket = "harish-bucket-project12-3009"
-  tags = {
-    Name = "Project12Bucket"
-  }
+terraform {
+  required_version = ">= 1.0"
+}
+ 
+resource "local_file" "example" {
+  filename = "hello.txt"
+  content  = "Terraform CI Pipeline Test"
 }
